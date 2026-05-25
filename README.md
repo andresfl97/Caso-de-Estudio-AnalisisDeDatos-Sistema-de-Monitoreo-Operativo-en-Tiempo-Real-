@@ -69,7 +69,6 @@ Este entregable unifica la matriz de carga laboral (oficina y remoto) del equipo
 ---
 
 <img width="1411" height="1071" alt="informe_general" src="https://github.com/user-attachments/assets/6b19ab06-0afa-4da9-a6a3-de5c453572ed" />
-<img width="1103" height="868" alt="contratistas_anonimizado" src="https://github.com/user-attachments/assets/18fcd516-a998-49ac-babe-ceddfe5f2173" />
 
 
 ---
