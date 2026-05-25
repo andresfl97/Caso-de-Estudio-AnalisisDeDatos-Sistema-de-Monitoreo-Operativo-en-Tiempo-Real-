@@ -44,9 +44,10 @@ Al centralizar y analizar la muestra piloto de este módulo, los primeros patron
 * **📉 Varianza Negativa en Niveles de Servicio:** El **Contratista B presentó una brecha de rendimiento negativa** en los indicadores críticos de eficiencia de resolución ($92.38\%$) y puntualidad ($93.33\%$) al ser contrastado de forma directa con los estándares de calidad demostrados por el Contratista A.
 
 ---
+<img width="1103" height="868" alt="contratistas_anonimizado" src="https://github.com/user-attachments/assets/e53f70d2-e614-4866-affe-1e83d61536a6" />
 
-<img width="1103" height="868" alt="contratistas_anonimizado" src="https://github.com/user-attachments/assets/4b9c1704-486c-4a2d-b375-4dbd483f7401" />
 
+---
 
 #### 🚀 Oportunidades de Mejora Identificadas (Módulo Técnico)
 * **🤝 Plan de Homologación de SLAs:** Establecer un plan de acción técnico y mesas de trabajo con el **Contratista B** para auditar sus cuellos de botella operativos, con el objetivo de homologar sus niveles de eficiencia con los estándares demostrados por el Contratista A.
@@ -67,9 +68,11 @@ Este entregable unifica la matriz de carga laboral (oficina y remoto) del equipo
 
 ---
 
-<p align="center">
-  <img width="700" alt="Dashboard de Experiencia del Cliente y Soporte" src="https://github.com/user-attachments/assets/22ca403d-3828-4d21-9625-09ebecd03ba9" />
-</p>
+<img width="1411" height="1071" alt="informe_general" src="https://github.com/user-attachments/assets/6b19ab06-0afa-4da9-a6a3-de5c453572ed" />
+<img width="1103" height="868" alt="contratistas_anonimizado" src="https://github.com/user-attachments/assets/18fcd516-a998-49ac-babe-ceddfe5f2173" />
+
+
+---
 
 #### 🚀 Oportunidades de Mejora Identificadas (Módulo CX)
 * **📐 Rediseño de la Captura (Data Collection Re-engineering):** Implementar lógica de exclusión condicional (*Skip Logic*) en los formularios de captura para separar de forma estricta la "Inactividad por desconocimiento del canal o falta de uso" de la "Inactividad debido a la estabilidad óptima y correcto funcionamiento del servicio".
@@ -84,7 +87,7 @@ Este entregable unifica la matriz de carga laboral (oficina y remoto) del equipo
 #### 🎯 Estado Actual: Producto Mínimo Viable y Fase Piloto
 El análisis y los dashboards presentados actúan como una prueba de concepto analítica para validar la infraestructura del pipeline de datos. 
 
-* **📋 Población vs. Muestra:** Los gráficos actuales se modelaron con base en una media de 45 a 52 encuestas recolectadas. Si bien este volumen fue clave para el **descubrimiento de sesgos** en el diseño de la captura (como el ruido detectado en el alcance operativo de horarios especiales), es estadísticamente insuficiente para representar con total fidelidad el universo completo de **+X000 clientes activos** del ISP. Por tanto, el producto final en su estado actual posee un carácter predictivo preliminar y **no debe ser considerado de alta confiabilidad** para la toma de decisiones definitivas de alto presupuesto.
+* **📋 Población vs. Muestra:** Los gráficos actuales se modelaron con base en una media de 45 a 52 encuestas recolectadas. Si bien este volumen fue clave para el **descubrimiento de sesgos** en el diseño de la captura (como el ruido detectado en el alcance operativo de horarios especiales), es estadísticamente insuficiente para representar con total fidelidad el universo completo de **+XXXX clientes activos** del ISP. Por tanto, el producto final en su estado actual posee un carácter predictivo preliminar y **no debe ser considerado de alta confiabilidad** para la toma de decisiones definitivas de alto presupuesto.
 * **🎲 Técnica de Muestreo:** La recolección de datos se ejecutó bajo la metodología de **Muestreo Aleatorio Simple (MAS)**, garantizando que cada cliente encuestado tras una interacción técnica tuviera exactamente la misma probabilidad de selección, minimizando así el sesgo de selección en campo.
 
 #### 📈 Ruta de Mitigación y Confiabilidad
