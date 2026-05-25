@@ -45,9 +45,8 @@ Al centralizar y analizar la muestra piloto de este módulo, los primeros patron
 
 ---
 
-<p align="center">
-  <img width="700" alt="Dashboard de Rendimiento Operativo Técnico" src="https://github.com/user-attachments/assets/b4031df5-01bc-4392-9a8f-36c3845041b4" />
-</p>
+<img width="1103" height="868" alt="contratistas_anonimizado" src="https://github.com/user-attachments/assets/4b9c1704-486c-4a2d-b375-4dbd483f7401" />
+
 
 #### 🚀 Oportunidades de Mejora Identificadas (Módulo Técnico)
 * **🤝 Plan de Homologación de SLAs:** Establecer un plan de acción técnico y mesas de trabajo con el **Contratista B** para auditar sus cuellos de botella operativos, con el objetivo de homologar sus niveles de eficiencia con los estándares demostrados por el Contratista A.
