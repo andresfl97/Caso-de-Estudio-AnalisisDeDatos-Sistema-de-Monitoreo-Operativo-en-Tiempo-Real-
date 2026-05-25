@@ -18,11 +18,11 @@ Este repositorio constituye un **Caso de Estudio con fines estrictamente académ
 ### ❓ ¿Puede un proveedor de internet mejorar la experiencia de sus usuarios si no es capaz de medir, en tiempo real, el rendimiento de sus cuadrillas de instalación y soporte técnico?
 
 #### 🔍 El Origen del Desafío
-En el sector de los Proveedores de Servicios de Internet (ISP), la calidad de la conectividad en el hogar depende directamente de la ejecución técnica en el campo. Sin embargo, en nuestra operación **no se contaba con un sistema de reportes ni un repositorio centralizado para auditar el rendimiento de las cuadrillas de red, help desk y atención al cliente**. La ejecución de estos roles se encontraba bajo un punto ciego de rendimiento para la gerencia. 
+En el sector de los Proveedores de Servicios de Internet (ISP), la calidad de la conectividad en el hogar depende directamente de la ejecución técnica. Sin embargo, en nuestra operación **no se contaba con un sistema de reportes ni un repositorio centralizado para auditar el rendimiento de los contratistas, soporte técnico (help desk) y atención al cliente**. La ejecución de estos roles se encontraba bajo un punto ciego de rendimiento para la empresa. 
 
-Esta **falta de visibilidad operativa** creaba un punto ciego crítico para la gerencia: impedía identificar cuellos de botella, evaluar los tiempos de resolución de incidencias de conectividad y hacía imposible correlacionar el desempeño técnico con la satisfacción real del cliente (**CSAT**). En una industria donde la estabilidad del servicio lo es todo, operar sin datos estructurados limitaba la gestión a una estrategia puramente reactiva ante los reclamos de los usuarios.
+Esta **falta de visibilidad operativa**  impedía identificar cuellos de botella, evaluar los tiempos de resolución de incidencias de conectividad. En una industria donde la estabilidad del servicio y el servicio al cliente lo es todo, operar sin datos estructurados limitaba la gestión a una estrategia puramente reactiva ante los reclamos de los usuarios.
 
-#### 🛠️ La Solución Implementada
+#### 🛠️ La Solución 
 Para resolver este vacío de información, diseñé e implementé un pipeline de datos automatizado, integrado de extremo a extremo (End-to-End) y *Cloud-Native*. La arquitectura utiliza:
 1. **`Google Forms`**: Para la captura inmediata de datos de satisfacción post-servicio (instalación o soporte de internet).
 2. **`Google Sheets`**: Como repositorio centralizado (*Data Store*) y motor de procesos ETL/ELT para la depuración, normalización y transformación de las variables operativas.
@@ -33,18 +33,21 @@ Para resolver este vacío de información, diseñé e implementé un pipeline de
 </p>
 
 
-El proyecto implementa una arquitectura de datos automatizada de extremo a extremo (End-to-End) estructurada en tres niveles. Primero, la Ingesta captura la experiencia del cliente mediante llamadas en frío centralizadas en Google Forms. Segundo, el Almacenamiento y Lógica actúa como el motor del sistema en Google Sheets, procesando los datos crudos en una matriz de cálculos y consultas estructuradas mediante procesos ETL. Finalmente, la Capa de Negocio conecta esta información de forma directa con Looker Studio, transformando los datos limpios en dos cuadros de mando interactivos que permiten auditar en tiempo real tanto el desempeño de las cuadrillas técnicas en campo como la percepción y uso del soporte de Helpdesk.
+El diagrama de flujo se puede interpretar a traves de los siguientes niveles: 
+* Primero, la Ingesta captura la experiencia del cliente mediante llamadas en frío centralizadas en Google Forms.
+* Segundo, el Almacenamiento y Lógica actúa como el motor del sistema en Google Sheets, procesando los datos crudos en una matriz de cálculos y consultas estructuradas mediante procesos ETL.
+* Finalmente, la Capa de Negocio conecta esta información de forma directa con Looker Studio, transformando los datos limpios en dos cuadros de mando interactivos que permiten auditar en tiempo real tanto el desempeño del equipo técnico y atención al cliente.
 
 ---
 
-## 🛠️ Módulo 1: Análisis de Desempeño de Cuadrillas (Rendimiento Técnico en Campo)
+## 🛠️ Módulo 1: Análisis de Desempeño de Contratistas (Rendimiento Técnico de ejecución de actividades)
 
-### ❓ ¿Cómo auditar la calidad y eficiencia de las instalaciones de red de múltiples proveedores externos bajo un mismo estándar analítico?
+### ❓ ¿Estamos gestionando la carga laboral de nuestras cuadrillas de manera que proyecten profesionalismo y calidad, asegurando que cada cliente se sienta satisfecho con el servicio contratado?
 
 #### 💡 Primeras Percepciones de los Datos (Módulo Técnico)
 Al centralizar y analizar la muestra piloto de este módulo, los primeros patrones de los datos revelaron tendencias clave sobre el rendimiento operativo y la distribución de la carga laboral:
-* **📦 Distribución Asimétrica de Operaciones:** El **Contratista A absorbió el 55.9% de las órdenes de trabajo** operativas frente al 44.1% gestionado por el Contratista B, concentrando su despliegue principalmente en el *Sector Alpha* y el *Sector Beta*.
-* **📉 Varianza Negativa en Niveles de Servicio:** El **Contratista B presentó una brecha de rendimiento negativa** en los indicadores críticos de eficiencia de resolución ($92.38\%$) y puntualidad ($93.33\%$) al ser contrastado de forma directa con los estándares de calidad demostrados por el Contratista A.
+* **📦 Distribución Asimétrica de Operaciones:** El **Contratista A absorbió el 55.9% de las órdenes de trabajo**  frente al 44.1% del Contratista B, concentrando su despliegue principalmente en el *Sector Alpha* y el *Sector Beta*.
+* **📉 Niveles de Servicio:** El **Contratista B presentó una brecha de rendimiento negativa** en los indicadores de eficiencia de resolución ($92.38\%$) y puntualidad ($93.33\%$) al ser contrastado de forma directa con los estándares de calidad demostrados por el Contratista A.
 
 ---
 <img width="1103" height="868" alt="contratistas_anonimizado" src="https://github.com/user-attachments/assets/e53f70d2-e614-4866-affe-1e83d61536a6" />
@@ -58,16 +61,43 @@ Al centralizar y analizar la muestra piloto de este módulo, los primeros patron
 
 ---
 
-## 📞 Módulo 2: Informe de Rendimiento y Soporte (Customer Experience - CX)
+## 📞 Módulo 2: Informe de Soporte Técnico, Atención al Cliente y Percepción del Servicio (Customer Experience - CX)
 
-### ❓ ¿Medir el promedio de satisfacción es suficiente, o necesitamos auditar si los recursos invertidos en soporte crítico realmente se están aprovechando?
+### ❓ ¿Medir el promedio de satisfacción es suficiente, o necesitamos auditar si los recursos invertidos en soporte técnico realmente se están aprovechando?
 
-#### 💡 Primeras Percepciones y Auditoría de Calidad del Dato (Módulo CX)
-Este entregable unifica la matriz de carga laboral (oficina y remoto) del equipo de *Helpdesk* con los indicadores de salud del cliente. El análisis arrojó métricas sobresalientes de atención, pero también desveló un sesgo analítico crítico en la recolección:
+### ❓ ¿Es suficiente medir la satisfacción del cliente o también se debe validar si los recursos de soporte realmente generan valor operativo?
 
-* **📈 Salud de la Atención y CX:** Los canales de soporte demostraron un rendimiento óptimo en la interacción directa, consolidando un **CSAT del 92.2%**, un **Tiempo Medio de Espera (TME) destacado de 1.9 minutos**, una valoración de trato de **4.6/5** y un índice de recomendación general de **8.0/10**.
-* **⚠️ Diagnóstico Imparcial de Datos (Data Quality Issue):** A la gerencia le preocupaba saber si los recursos financieros invertidos para cubrir horarios especiales (nocturno y fines de semana) estaban siendo aprovechados con eficiencia. Inicialmente, el gráfico de *Alcance Operativo* arrojó un alarmante $90.74\%$ de "Inactividad" en el horario nocturno. Al realizar una auditoría profunda del dato crudo, identifiqué una **contaminación de variables**: los usuarios que consideraban que el servicio de internet era excelente y que *nunca tuvieron la necesidad de llamar al soporte*, seleccionaron por descarte la opción de "Inactividad (No saben/No usan)". 
-* **💡 Lección Analítica:** Lejos de ocultar este ruido, identificar pronto este sesgo en mi primer proyecto real me permitió observar de primera mano las distorsiones que causa un instrumento de captura mal estructurado. Validó el impacto real de la regla *Garbage In, Garbage Out* (si introduces datos ambiguos, obtienes reportes distorsionados) y la necesidad imperativa de mejorar el diseño de la recopilación en el origen antes de masificar el flujo.
+## 💡 Auditoría de Calidad del Dato y Percepción del Servicio (Módulo CX)
+
+Este análisis integró la matriz operativa del equipo *Helpdesk* (presencial y remoto) con indicadores de experiencia del cliente, permitiendo contrastar desempeño operativo, percepción del servicio y utilización real de recursos.
+
+### 📈 Indicadores Operativos y Experiencia del Cliente
+
+- **CSAT:** 92.2%
+- **Tiempo Medio de Espera (TME):** 1.9 minutos
+- **Valoración de atención:** 4.6/5
+- **Percepción general del servicio:** 8/10
+- **Nivel de recomendación:** 4.1/5
+
+Los indicadores reflejan una experiencia positiva del cliente; sin embargo, el análisis detectó un comportamiento atípico en horarios especiales (nocturnos y fines de semana), con niveles de inactividad del **90.74%** y **87.04%** respectivamente.
+
+### ⚠️ Hallazgo Analítico: Sesgo en la Recolección
+
+El porcentaje de “inactividad” inicialmente fue interpretado como baja utilización del soporte fuera del horario regular. No obstante, la auditoría del dato crudo permitió identificar una contaminación de variables en el instrumento de captura:
+
+Muchos usuarios que calificaban el servicio como “excelente” y que nunca necesitaron contactar soporte seleccionaban la opción *“No sabe / No usa”*, generando una falsa percepción de desperdicio operativo.
+
+### 🔍 Interpretación Estratégica
+
+El problema no estaba únicamente en la demanda del servicio, sino en la ausencia de comunicación efectiva sobre la disponibilidad de soporte 24/7. La percepción positiva del servicio coexistía con desconocimiento de los canales de atención.
+
+Este hallazgo permitió evidenciar cómo un diseño ambiguo en la captura puede distorsionar indicadores gerenciales y afectar decisiones sobre asignación de recursos.
+
+### 💡 Aprendizaje Técnico
+
+La detección temprana de este sesgo permitió validar, en un entorno real, el impacto de la regla *Garbage In, Garbage Out*: datos ambiguos producen análisis imprecisos.
+
+El proyecto evidenció la necesidad de fortalecer la calidad del dato desde el origen antes de escalar procesos analíticos, dashboards o métricas de negocio.
 
 ---
 
@@ -77,8 +107,28 @@ Este entregable unifica la matriz de carga laboral (oficina y remoto) del equipo
 ---
 
 #### 🚀 Oportunidades de Mejora Identificadas (Módulo CX)
-* **📐 Rediseño de la Captura (Data Collection Re-engineering):** Implementar lógica de exclusión condicional (*Skip Logic*) en los formularios de captura para separar de forma estricta la "Inactividad por desconocimiento del canal o falta de uso" de la "Inactividad debido a la estabilidad óptima y correcto funcionamiento del servicio".
-* **🧹 Depuración del Histórico:** Desarrollar un proceso de limpieza secundario para aislar las respuestas contaminadas actuales en el histórico y recalcular el verdadero porcentaje de uso de las ventanas de horarios especiales, asegurando una auditoría presupuestaria transparente y real para la jefatura de la agencia.
+### 📐 Reingeniería de Captura de Datos
+
+Rediseño del flujo de recolección mediante lógica de exclusión condicional (*Skip Logic*), separando de forma precisa:
+
+- Usuarios que desconocen la existencia del canal de soporte.
+- Usuarios que no utilizan soporte debido a la estabilidad y correcto funcionamiento del servicio.
+
+La modificación permitió reducir ambigüedad en la captura y mejorar la trazabilidad analítica de los indicadores operativos.
+
+### 🧠 Análisis de Sentimientos y Contexto Operativo
+
+Durante la captura y revisión manual de interacciones, se identificó que las encuestas tradicionales no reflejaban completamente la percepción del cliente.
+
+Aunque muchos usuarios calificaban positivamente el servicio, las conversaciones telefónicas revelaban molestias, frustraciones y observaciones operativas que no aparecían en los formularios estructurados.
+
+Esto permitió detectar una fuente complementaria de información para análisis de sentimientos, enriqueciendo la interpretación de KPI’s como CSAT, recomendación y percepción del servicio.
+
+### 🧹 Depuración y Recalibración del Histórico
+
+Diseño de un proceso de limpieza secundaria orientado a aislar respuestas contaminadas dentro del histórico de datos, permitiendo recalcular el uso real de horarios especiales.
+
+La depuración permitió generar una visión más precisa para auditoría presupuestaria y evaluación de eficiencia operativa en la asignación de recursos de soporte técnico.
 
 ---
 
@@ -92,11 +142,6 @@ El análisis y los dashboards presentados actúan como una prueba de concepto an
 * **📋 Población vs. Muestra:** Los gráficos actuales se modelaron con base en una media de 45 a 52 encuestas recolectadas. Si bien este volumen fue clave para el **descubrimiento de sesgos** en el diseño de la captura (como el ruido detectado en el alcance operativo de horarios especiales), es estadísticamente insuficiente para representar con total fidelidad el universo completo de **+XXXX clientes activos** del ISP. Por tanto, el producto final en su estado actual posee un carácter predictivo preliminar y **no debe ser considerado de alta confiabilidad** para la toma de decisiones definitivas de alto presupuesto.
 * **🎲 Técnica de Muestreo:** La recolección de datos se ejecutó bajo la metodología de **Muestreo Aleatorio Simple (MAS)**, garantizando que cada cliente encuestado tras una interacción técnica tuviera exactamente la misma probabilidad de selección, minimizando así el sesgo de selección en campo.
 
-#### 📈 Ruta de Mitigación y Confiabilidad
-Para elevar la madurez del proyecto de un nivel descriptivo/piloto a un **Sistema de Soporte a la Decisión (DSS)** con robustez estadística, se presentó a la jefatura de la agencia la siguiente estrategia de estabilización y escalado:
-
-1. **⏳ Ventana Temporal de Maduración (3 Meses):** Es imperativo mantener el pipeline de recolección activo por un periodo mínimo de **tres meses consecutivos**. Esta ventana de tiempo permitirá mitigar las anomalías estacionales de la red y capturar un volumen de datos lo suficientemente robusto como para estabilizar la varianza.
-2. **📉 Reducción del Margen de Error:** Al acumular los datos de este trimestre de operaciones, el tamaño de la muestra ($n$) alcanzará el umbral crítico requerido para calcular los KPIs con un nivel de confianza del $95\%$ y un margen de error inferior al $5\%$, transformando el tablero en una herramienta de auditoría financiera y operativa $100\%$ fiable.
 
 ---
 
