@@ -63,8 +63,6 @@ Al centralizar y analizar la muestra piloto de este módulo, los primeros patron
 
 ## 📞 Módulo 2: Informe de Soporte Técnico, Atención al Cliente y Percepción del Servicio (Customer Experience - CX)
 
-### ❓ ¿Medir el promedio de satisfacción es suficiente, o necesitamos auditar si los recursos invertidos en soporte técnico realmente se están aprovechando?
-
 ### ❓ ¿Es suficiente medir la satisfacción del cliente o también se debe validar si los recursos de soporte realmente generan valor operativo?
 
 ## 💡 Auditoría de Calidad del Dato y Percepción del Servicio (Módulo CX)
@@ -97,7 +95,7 @@ Este hallazgo permitió evidenciar cómo un diseño ambiguo en la captura puede 
 
 La detección temprana de este sesgo permitió validar, en un entorno real, el impacto de la regla *Garbage In, Garbage Out*: datos ambiguos producen análisis imprecisos.
 
-El proyecto evidenció la necesidad de fortalecer la calidad del dato desde el origen antes de escalar procesos analíticos, dashboards o métricas de negocio.
+El proyecto evidenció la necesidad de fortalecer la calidad del dato desde el origen antes de escalar la muestra e implementar procesos analíticos, dashboards o métricas de negocio.
 
 ---
 
@@ -118,11 +116,11 @@ La modificación permitió reducir ambigüedad en la captura y mejorar la trazab
 
 ### 🧠 Análisis de Sentimientos y Contexto Operativo
 
-Durante la captura y revisión manual de interacciones, se identificó que las encuestas tradicionales no reflejaban completamente la percepción del cliente.
+Durante la captura y interacciones telefónicas, se identificó que las encuestas tradicionales no reflejaban completamente la percepción del cliente.
 
 Aunque muchos usuarios calificaban positivamente el servicio, las conversaciones telefónicas revelaban molestias, frustraciones y observaciones operativas que no aparecían en los formularios estructurados.
 
-Esto permitió detectar una fuente complementaria de información para análisis de sentimientos, enriqueciendo la interpretación de KPI’s como CSAT, recomendación y percepción del servicio.
+Esto permitió detectar una fuente complementaria de información para realizar un análisis de sentimientos, enriqueciendo la interpretación de KPI’s como CSAT, recomendación y percepción del servicio.
 
 ### 🧹 Depuración y Recalibración del Histórico
 
@@ -137,7 +135,7 @@ La depuración permitió generar una visión más precisa para auditoría presup
 ### ❓ ¿Es ético tomar decisiones de inversión presupuestaria en base a las primeras tendencias de una muestra pequeña?
 
 #### 🎯 Estado Actual: Producto Mínimo Viable y Fase Piloto
-El análisis y los dashboards presentados actúan como una prueba de concepto analítica para validar la infraestructura del pipeline de datos. 
+El análisis y los dashboards presentados actúan como una prueba de los primeros patrones y tendencias que se enfrenta al empresa día a día. 
 
 * **📋 Población vs. Muestra:** Los gráficos actuales se modelaron con base en una media de 45 a 52 encuestas recolectadas. Si bien este volumen fue clave para el **descubrimiento de sesgos** en el diseño de la captura (como el ruido detectado en el alcance operativo de horarios especiales), es estadísticamente insuficiente para representar con total fidelidad el universo completo de **+XXXX clientes activos** del ISP. Por tanto, el producto final en su estado actual posee un carácter predictivo preliminar y **no debe ser considerado de alta confiabilidad** para la toma de decisiones definitivas de alto presupuesto.
 * **🎲 Técnica de Muestreo:** La recolección de datos se ejecutó bajo la metodología de **Muestreo Aleatorio Simple (MAS)**, garantizando que cada cliente encuestado tras una interacción técnica tuviera exactamente la misma probabilidad de selección, minimizando así el sesgo de selección en campo.
@@ -147,9 +145,9 @@ El análisis y los dashboards presentados actúan como una prueba de concepto an
 
 ## 🔄 Recomendaciones & Escalabilidad del Proyecto
 
-Para evolucionar este MVP hacia una infraestructura de datos empresarial, robusta y funcional, se define el siguiente *Roadmap* de ingeniería:
+Para evolucionar este proyecto hacia una infraestructura de datos empresarial, robusta y funcional, se define el siguiente *Roadmap* de ingeniería:
 
-- [ ] **🗄️ Migración a Base de Datos Relacional:** Sustituir Google Sheets por un motor de código abierto como `PostgreSQL` para garantizar la integridad referencial, mayor concurrencia en consultas simultáneas y optimización del almacenamiento histórico de logs.
+- [ ] **🗄️ Migración a Base de Datos Relacional:** Sustituir Google Sheets por un motor de código abierto como `PostgreSQL` para garantizar la integridad referencial, mayor concurrencia en consultas simultáneas y optimización del almacenamiento histórico.
 - [ ] **⏱️ Análisis de Series Temporales (Time-Series) y Clustering:** Modelar los datos de soporte de forma temporal para identificar patrones de estacionalidad en las caídas del servicio de internet y anticipar picos de demanda. Asimismo, aplicar algoritmos de *Clustering* para identificar proactivamente segmentos de clientes inconformes con el servicio y mitigar un riesgo elevado de cancelación de contratos (*Churn Rate*).
-- [ ] **🎛️ Tableros Dinámicos Avanzados:** Desarrollar en la interfaz de Looker Studio filtros cruzados por ventanas de tiempo móviles, selección múltiple de contratistas y segmentación avanzada por tipo de avería (*Internet lento vs. Sin señal*).
+- [ ] **🎛️ Tableros Dinámicos Avanzados:** Desarrollar en la interfaz de Looker Studio filtros cruzados por ventanas de tiempo móviles, selección múltiple de contratistas y segmentación avanzada con la finalidad de que gerencia pueda generar reportes en tiempo real de métricas de su interes, ya sea diario, semanal, mensual o incluso anual si el proyecto escala.
 - [ ] **🤖 Automatización Completa:** Automatizar por completo las tareas rutinarias de limpieza y transformación del dato crudo mediante scripts programados, reduciendo a cero el procesamiento manual en el backend.
