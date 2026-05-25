@@ -32,6 +32,9 @@ Para resolver este vacío de información, diseñé e implementé un pipeline de
   <img width="500" alt="Diagrama de Flujo del Sistema" src="https://github.com/user-attachments/assets/2483cee7-8f79-49d4-b122-58a3b536527f" />
 </p>
 
+
+El proyecto implementa una arquitectura de datos automatizada de extremo a extremo (End-to-End) estructurada en tres niveles. Primero, la Ingesta captura la experiencia del cliente mediante llamadas en frío centralizadas en Google Forms. Segundo, el Almacenamiento y Lógica actúa como el motor del sistema en Google Sheets, procesando los datos crudos en una matriz de cálculos y consultas estructuradas mediante procesos ETL. Finalmente, la Capa de Negocio conecta esta información de forma directa con Looker Studio, transformando los datos limpios en dos cuadros de mando interactivos que permiten auditar en tiempo real tanto el desempeño de las cuadrillas técnicas en campo como la percepción y uso del soporte de Helpdesk.
+
 ---
 
 ## 🛠️ Módulo 1: Análisis de Desempeño de Cuadrillas (Rendimiento Técnico en Campo)
