@@ -140,7 +140,7 @@ Esto generaba una interpretación errónea sobre baja utilización del soporte t
 El análisis permitió identificar que:
 
 - La baja interacción no implicaba necesariamente baja calidad del soporte.
-- Existía desconocimiento de los canales de atención 24/7, eran invisible para los usuarios del servicio.
+- Existía desconocimiento de los canales de atención 24/7, son invisibles para los usuarios del servicio.
 - Un diseño ambiguo en la captura distorsionaba indicadores operativos y gerenciales.
 
 ---
@@ -187,8 +187,6 @@ Aunque muchos usuarios calificaban positivamente el servicio, las conversaciones
 
 ---
 
-# 📐 Consideraciones Metodológicas y Validación Estadística
-
 ### ❓ ¿Es apropiado tomar decisiones presupuestarias basadas en una muestra piloto reducida?
 
 ## 🎯 Estado Actual del Proyecto
@@ -201,7 +199,7 @@ Aunque muchos usuarios calificaban positivamente el servicio, las conversaciones
 | Nivel de Inferencia | Exploratorio |
 | Objetivo Actual | Descubrimiento de patrones y sesgos |
 
-### 📋 Consideraciones Estadísticas
+## 📋 Consideraciones Estadísticas
 
 - La muestra permitió detectar inconsistencias en la captura y comportamiento operativo.
 - El volumen actual todavía no representa completamente el universo de **+XXXX clientes activos**.
