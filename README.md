@@ -111,7 +111,7 @@ El análisis integró indicadores operativos del equipo *Helpdesk* con métricas
 | CSAT | 92.2% |
 | Tiempo Medio de Espera (TME) | 1.9 minutos |
 | Valoración de Atención | 4.6 / 5 |
-| Percepción General del Servicio | 4.1/ 5 |
+| Percepción General del Servicio | 4.1 / 5 |
 | Nivel de Recomendación | 8 / 10 |
 
 A pesar de los indicadores positivos, el análisis detectó niveles elevados de aparente inactividad en horarios especiales:
