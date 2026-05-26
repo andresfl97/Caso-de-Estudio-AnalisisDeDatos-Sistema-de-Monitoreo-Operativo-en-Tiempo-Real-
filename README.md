@@ -1,4 +1,4 @@
-## 🔒 Políticas de Confidencialidad y Gobierno de Datos (Cumplimiento LOPDP Ecuador)
+## Políticas de Confidencialidad y Gobierno de Datos (Cumplimiento LOPDP Ecuador)
 
 Con el fin de garantizar el secreto profesional, la protección de la propiedad intelectual de la organización y el cumplimiento del marco legal ecuatoriano, toda la información sensible contenida en este repositorio fue sometida a procesos de **anonimización y seudonimización**.
 
@@ -14,15 +14,14 @@ Este repositorio constituye un **caso de estudio con fines académicos y de demo
 
 ---
 
-# 🌐 Sistema de Monitoreo en Tiempo Real: KPI’s Operativos y Customer Experience (CX) — Entorno ISP (+XXXX clientes activos)
+# Sistema de Monitoreo en Tiempo Real: KPI’s Operativos y Customer Experience (CX) — Entorno ISP (+XXXX clientes activos)
 
-## 📖 Storytelling del Proyecto
+
 
 ### ❓ ¿Puede un proveedor de internet mejorar la experiencia de sus usuarios si no dispone de visibilidad en tiempo real sobre el desempeño de instalación, soporte técnico y atención al cliente?
 
----
 
-## 🔍 Origen del Desafío
+## 🔍 Problemática
 
 En la operación del ISP no existía un sistema centralizado que permitiera:
 
@@ -35,7 +34,7 @@ La ausencia de datos estructurados obligaba a mantener una gestión reactiva bas
 
 ---
 
-## 🛠️ Solución Implementada
+## 🛠️ Solución
 
 Para resolver este vacío operacional, se diseñó e implementó un pipeline de datos automatizado, integrado de extremo a extremo (*End-to-End*) bajo una arquitectura *Cloud-Native*.
 
@@ -57,7 +56,7 @@ Para resolver este vacío operacional, se diseñó e implementó un pipeline de 
 
 ---
 
-# 🛠️ Módulo 1: Análisis de Desempeño de Contratistas
+#  Módulo 1: Análisis de Desempeño de Contratistas
 
 ### ❓ ¿La distribución de carga operativa permite garantizar calidad y satisfacción del cliente?
 
@@ -73,28 +72,31 @@ El análisis de la muestra piloto permitió detectar patrones relevantes sobre d
 | Eficiencia de Resolución — Contratista B | 92.38% |
 | Puntualidad — Contratista B | 93.33% |
 
-### 🔎 Observaciones Detectadas
-
-- El **Contratista A** concentraba la mayor carga operativa.
-- El **Contratista B** presentó diferencias en puntualidad y eficiencia respecto al estándar esperado.
-- La distribución geográfica evidenció oportunidades de optimización logística.
-
 ---
 
 <img width="1103" height="868" alt="contratistas_anonimizado" src="https://github.com/user-attachments/assets/e53f70d2-e614-4866-affe-1e83d61536a6" />
 
 ---
 
-## 🚀 Oportunidades de Mejora — Módulo Técnico
+### 🔎 Observaciones Detectadas
 
-- **Homologación de SLA’s:** Auditoría técnica y mesas de trabajo para estandarizar niveles de servicio entre contratistas.
-- **Optimización Logística:** Redistribución geográfica de órdenes para reducir tiempos de traslado.
-- **Balance Operativo:** Mejor distribución de carga entre cuadrillas técnicas.
-- **Monitoreo Continuo:** Seguimiento de KPI’s operativos en tiempo real.
+- El **Contratista A** concentraba la mayor carga operativa.
+- El **Contratista B** presentó diferencias en puntualidad y eficiencia respecto al estándar esperado.
+- La distribución geográfica evidenció oportunidades de optimización logística.
+
 
 ---
 
-# 📞 Módulo 2: Customer Experience (CX)
+## 🚀 Oportunidades de Mejora — Módulo Técnico
+
+- **Homologación de SLA’s:** Auditoría técnica y mesas de trabajo para estandarizar niveles de servicio entre contratistas.
+- **Optimización Logística:** Redistribución geográfica de órdenes de trabajo para reducir tiempos de traslado.
+- **Balance Operativo:** Mejor distribución de carga entre contratistas.
+- **Monitoreo Continuo:** Seguimiento de KPI’s operativos en tiempo real, lanzar alerta en puntuaciones menores a 8.
+
+---
+
+#  Módulo 2: Customer Experience (CX)
 
 ### ❓ ¿La satisfacción del cliente refleja realmente la utilización y efectividad del soporte técnico?
 
@@ -119,6 +121,10 @@ A pesar de los indicadores positivos, el análisis detectó niveles elevados de 
 
 ---
 
+<img width="1411" height="1071" alt="informe_general" src="https://github.com/user-attachments/assets/6b19ab06-0afa-4da9-a6a3-de5c453572ed" />
+
+---
+
 ## ⚠️ Hallazgo Analítico: Sesgo en la Captura
 
 La auditoría del dato crudo permitió detectar contaminación de variables dentro del formulario de captura.
@@ -134,7 +140,7 @@ Esto generaba una interpretación errónea sobre baja utilización del soporte t
 El análisis permitió identificar que:
 
 - La baja interacción no implicaba necesariamente baja calidad del soporte.
-- Existía desconocimiento parcial de los canales de atención 24/7.
+- Existía desconocimiento de los canales de atención 24/7, eran invisible para los usuarios del servicio.
 - Un diseño ambiguo en la captura distorsionaba indicadores operativos y gerenciales.
 
 ---
@@ -149,9 +155,7 @@ Datos ambiguos producen análisis imprecisos y pueden afectar decisiones operati
 
 ---
 
-<img width="1411" height="1071" alt="informe_general" src="https://github.com/user-attachments/assets/6b19ab06-0afa-4da9-a6a3-de5c453572ed" />
 
----
 
 # 🚀 Oportunidades de Mejora — Módulo CX
 
@@ -179,19 +183,7 @@ Aunque muchos usuarios calificaban positivamente el servicio, las conversaciones
 - Frustraciones operativas.
 - Molestias no registradas en formularios.
 - Observaciones técnicas adicionales.
-
-Esto abrió la posibilidad de complementar KPI’s tradicionales mediante técnicas de análisis de sentimientos y procesamiento contextual.
-
----
-
-## 🧹 Depuración y Recalibración Histórica
-
-Se diseñó un proceso de limpieza secundaria para:
-
-- Aislar respuestas contaminadas.
-- Recalcular métricas reales de uso.
-- Mejorar auditoría presupuestaria.
-- Incrementar confiabilidad operativa.
+- Falta de comunicación.
 
 ---
 
@@ -203,8 +195,8 @@ Se diseñó un proceso de limpieza secundaria para:
 
 | Elemento | Estado |
 |---|---|
-| Tipo de Proyecto | Producto Mínimo Viable (MVP) |
-| Tamaño de Muestra | 45 a 52 encuestas |
+| Tipo de Proyecto | Producto Mínimo Viable |
+| Tamaño de Muestra | 45 a 52 (encuestas/panel de control) |
 | Técnica de Muestreo | Muestreo Aleatorio Simple (MAS) |
 | Nivel de Inferencia | Exploratorio |
 | Objetivo Actual | Descubrimiento de patrones y sesgos |
