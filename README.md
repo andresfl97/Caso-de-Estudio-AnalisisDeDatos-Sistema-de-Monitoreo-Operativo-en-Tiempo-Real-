@@ -7,7 +7,7 @@ Este tratamiento se sustenta en la **Ley Orgánica de Protección de Datos Perso
 | Principio Aplicado | Implementación |
 |---|---|
 | **Confidencialidad (Art. 10 - LOPDP)** | Los nombres reales de la empresa y contratistas fueron reemplazados mediante etiquetas neutrales como *Contratista A* y *Contratista B*. |
-| **Seguridad y Anonimización (Art. 11 - LOPDP)** | Los datos numéricos, geográficos y volumétricos fueron transformados visualmente para evitar trazabilidad operativa y comercial. |
+| **Seguridad y Anonimización (Art. 11 - LOPDP)** | Los datos numéricos, geográficos y volumétricos fueron transformados visualmente para evitar trazabilidad operativa y comercial. Las etiquetas *Alpha*, *Beta* y *Gamma* hacen referencia a los sectores donde operan los contratistas. |
 | **Protección de Información** | Se resguarda el ecosistema de **+XXXXX clientes activos** y la operación interna del ISP. |
 
 Este repositorio constituye un **caso de estudio con fines académicos y de demostración técnica**, enfocado en exponer la arquitectura del pipeline, la lógica analítica y el modelado de datos sin comprometer activos de información ni acuerdos de confidencialidad.
